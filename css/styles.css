@@ -95,63 +95,52 @@ nav ul {
 }
 
 .header-background {
-  background-image: url("../images/books-background-opacity-80.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px;
+  height: 100vh;
   width: 100%;
   margin-top: 8rem;
   position: relative;
   z-index: -10;
 }
 
+@media only screen and (max-device-width: 1366px) {
+  .header-background {
+    background-attachment: scroll;
+  }
+}
+
 header {
+  background-image: url("../images/books-background-opacity-80.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
   position: fixed;
   margin-top: -3rem;
-  height: 400px;
+  height: 100vh;
   width: 100%;
+  text-align: center;
 }
 
 header h1 {
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: 0.1rem;
-  margin-top: 5rem;
 }
 
 header p {
   font-size: 2rem;
   font-weight: 600;
-  z-index: 1;
-}
-
-@media only screen and (max-width: 480px) {
-  header {
-    padding: 0 1rem;
-  }
-
-  header h1 {
-    font-size: 2rem;
-    letter-spacing: normal;
-    white-space: pre;
-  }
-
-  header p {
-    font-size: 1.5rem;
-    letter-spacing: normal;
-  }
 }
 
 .color-overlay {
   background-color: rgba(255, 255, 255, 0.5);
-  height: 400px;
+  height: 100vh;
   width: 100%;
 }
 
@@ -159,10 +148,9 @@ header p {
   background-color: rgba(255, 255, 255, 1);
   height: fit-content;
   width: 100%;
-  margin: 0 auto;
-  padding-bottom: 3rem;
 }
 
+/* Sections */
 .chapters,
 .schedule,
 .register {
@@ -180,13 +168,12 @@ header p {
   .schedule,
   .register {
     width: 100%;
-    padding: 3rem 1rem;
   }
 }
 
 @media only screen and (max-width: 480px) {
   iframe {
-    width: 340px;
+    width: 100%;
     height: auto;
   }
 }
@@ -206,12 +193,23 @@ header p {
   width: 4rem;
 }
 
+/* Chapters Section */
+.chapters {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: center;
+  height: fit-content;
+}
+
 .cards {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
+  width: fit-content;
 }
 
 .cards__details,
@@ -223,9 +221,75 @@ header p {
   gap: 2rem;
   background-color: rgba(53, 59, 72, 1);
   border: 2px solid rgba(53, 59, 72, 1);
-  border-radius: 0.4rem;
   color: rgba(247, 241, 227, 1);
   padding: 1rem;
+}
+
+.cards__details {
+  width: fit-content;
+  height: fit-content;
+  padding-bottom: 2rem;
+}
+
+.cards__details iframe {
+  width: 80rem;
+  height: 60rem;
+}
+
+.schedule__details {
+  width: 82rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cards__details,
+.cards__details iframe,
+.schedule__details {
+  border-radius: 0.4rem;
+}
+
+.cards__details,
+.schedule__details {
+  margin: 0 1rem;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 860px) {
+  .cards__details iframe {
+    width: 72rem;
+    height: 54rem;
+  }
+
+  .schedule__details {
+    width: 74rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .cards__details iframe {
+    width: 40rem;
+    height: 30rem;
+  }
+
+  .schedule__details {
+    width: 42rem;
+  }
+
+  .cards__details,
+  .cards__details iframe,
+  .schedule__details {
+    border-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .cards__details iframe {
+    width: 32rem;
+    height: 24rem;
+  }
+
+  .schedule__details {
+    width: 34rem;
+  }
 }
 
 .cards__details h3 {
@@ -233,19 +297,21 @@ header p {
   letter-spacing: 0.1rem;
 }
 
-.cards__details iframe {
-  border-radius: 0.4rem;
+/* Schedule Section */
+.schedule {
+  width: fit-content;
+  height: fit-content;
 }
 
 #sunapee,
 #lebanon,
 #tilton {
-  width: 100%;
+  width: fit-content;
 }
 
-.schedule__details {
+#sunapee,
+#lebanon {
   margin-bottom: 2rem;
-  width: 100%;
 }
 
 /* Calendar */
@@ -255,9 +321,8 @@ ul {
 
 .calendar {
   font-family: Verdana, sans-serif;
-  height: auto;
-  width: 100%;
   padding-top: 1rem;
+  width: 100%;
 }
 
 .calendar__details {
@@ -315,8 +380,14 @@ ul {
   width: 13.6%;
   text-align: center;
   margin-bottom: 5px;
-  font-size: 12px;
+  font-size: 2rem;
   color: #777;
+}
+
+@media only screen and (max-width: 480px) {
+  .days li {
+    font-size: 1.5rem;
+  }
 }
 
 .days li .active-day {
@@ -359,32 +430,46 @@ ul {
 }
 
 /* Registration */
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  height: fit-content;
+  margin-bottom: 8rem;
+}
 
 .form-container {
+  height: 60rem;
   width: 35rem;
   margin: 0 auto;
 }
+
 /* Full-width input fields */
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+select {
+  font-family: inherit;
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+  padding: 1rem;
+  margin: 0.5rem 0 1.5rem;
   display: inline-block;
   border: none;
   background: #f1f1f1;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus {
-  background-color: #ddd;
-  outline: none;
+@media only screen and (max-width: 360px) {
+  .form-container {
+    width: 32rem;
+  }
 }
 
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+  background-color: #ddd;
+  outline: none;
 }
 
 /* Set a style for the submit/register button */
@@ -410,21 +495,34 @@ a {
 
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   background-color: rgba(53, 59, 72, 1);
   color: rgba(247, 241, 227, 1);
-  height: 6rem;
+  height: fit-content;
   width: 100%;
 }
 
-.book-icon {
-  align-self: center;
-  display: inline-block;
+footer p {
   height: 2rem;
+}
+
+footer p:first-child {
+  margin-top: 1rem;
+}
+
+footer p:last-of-type {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.book-icon {
+  display: inline-block;
+  height: 2.3rem;
   width: auto;
-  margin-top: 0.4rem;
+  margin-right: 0.5rem;
+  margin-bottom: -0.5rem;
 }
 
 .copyright {
