@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readers United Book Club</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,300;7..72,400;7..72,500&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+
+  <body>
+    <div id="home" class="navigation-container">
+      <div class="nav-heading">
+        <img src="./images/book-icon.png" alt="Book Icon" width="25" height="25">
+        <h4>Readers United Book Club</h4>
+      </div>
+      <nav>
+        <ul>
+          <li><a id="home-link" class="nav-link active" href="">Home</a></li>
+          <li><a id="chapters-link" class="nav-link" href="">Chapters</a></li>
+          <li><a id="schedule-link" class="nav-link" href="">Schedule</a></li>
+          <li><a id="register-link" class="nav-link" href="">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-background">
+      <header>
+        <h1>Welcome to Readers United Book Club</h1>
+        <p>
+          Dedicated to those who love reading great books
+        </p>
+      </header>
+      <div class="color-overlay"></div>
+    </div>
+    <div class="container">
+      <section class="chapters">
+        <div class="section-heading">
+          <img id="chapters" src="./images/chapters-icon.png" alt="Flat icon book chapters" height:"auto" width="40px">
+          <h2>Chapters</h2>
+        </div>
+        <div class="cards">
+          <div class="cards__details">
+            <h3>Sunapee, NH</h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7306.223202717673!2d-72.09308018809993!3d43.38797611418006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e1f10159700001%3A0xd43136320e143a6d!2sCoffeeHouse!5e0!3m2!1sen!2sus!4v1698745798512!5m2!1sen!2sus"
+              width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="cards__details">
+            <h3>Lebanon, NH</h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92391.62849271746!2d-72.36827867823742!3d43.64320829999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb4b45708e10e4d%3A0x15ef72e0bb7da574!2sLucky&#39;s%20Coffee%20Garage!5e0!3m2!1sen!2sus!4v1698745621715!5m2!1sen!2sus"
+              width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="cards__details">
+            <h3>Tilton, NH</h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d185414.36292691124!2d-71.98411681123281!3d43.43763951084018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e20b0b7b9ebc2f%3A0x73b750e9206f98f5!2sAroma%20Joe&#39;s%20Coffee!5e0!3m2!1sen!2sus!4v1698745910487!5m2!1sen!2sus"
+              width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="schedule">
+        <div class="section-heading">
+          <img id="schedule" src="./images/calendar-icon.png" alt="Flat icon book calendar" height:"auto" width="40px">
+          <h2>Reading Schedules</h2>
+        </div>
+        <section id="sunapee">
+          <div class="schedule__details">
+            <div class="calendar">
+              <div class="calendar__details">
+                <h3>Sunapee Bookclub</h3>
+                <ul>
+                  <li>
+                    <span id="month"></span><br>
+                    <span id="year" style="font-size:18px"></span>
+                  </li>
+                </ul>
+              </div>
+
+              <ul class="weekdays">
+                <li>Mo</li>
+                <li>Tu</li>
+                <li>We</li>
+                <li>Th</li>
+                <li>Fr</li>
+                <li>Sa</li>
+                <li>Su</li>
+              </ul>
+
+              <ul class="days"></ul>
+            </div>
+            <div class="time-place">
+              <h4>Time:&nbsp;&nbsp; 2 PM to 4 PM</h4>
+              <h4>Location:</h4>
+              <p>
+                CoffeeHouse
+                <br>
+                9 Lower Main St
+                <br>
+                Sunapee, NH 03782
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="lebanon">
+          <div class="schedule__details">
+            <div class="calendar">
+              <div class="calendar__details">
+                <h3>Lebanon Bookclub</h3>
+                <ul>
+                  <li>
+                    <span id="month"></span><br>
+                    <span id="year" style="font-size:18px"></span>
+                  </li>
+                </ul>
+              </div>
+
+              <ul class="weekdays">
+                <li>Mo</li>
+                <li>Tu</li>
+                <li>We</li>
+                <li>Th</li>
+                <li>Fr</li>
+                <li>Sa</li>
+                <li>Su</li>
+              </ul>
+
+              <ul class="days"></ul>
+            </div>
+            <div class="time-place">
+              <h4>Time:&nbsp;&nbsp; 12 PM to 2 PM</h4>
+              <h4>Location:</h4>
+              <p>
+                Lucky's Coffee Garage
+                <br>
+                1 N Park St
+                <br>
+                Lebanon, NH 03766
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="tilton">
+          <div class="schedule__details">
+            <div class="calendar">
+              <div class="calendar__details">
+                <h3>Tilton Bookclub</h3>
+                <ul>
+                  <li>
+                    <span id="month"></span><br>
+                    <span id="year" style="font-size:18px"></span>
+                  </li>
+                </ul>
+              </div>
+
+              <ul class="weekdays">
+                <li>Mo</li>
+                <li>Tu</li>
+                <li>We</li>
+                <li>Th</li>
+                <li>Fr</li>
+                <li>Sa</li>
+                <li>Su</li>
+              </ul>
+
+              <ul class="days"></ul>
+            </div>
+            <div class="time-place">
+              <h4>Time:&nbsp;&nbsp; 10 AM to 12 PM</h4>
+              <h4>Location:</h4>
+              <p>
+                Aroma Joe's Coffee
+                <br>
+                478 W Main St
+                <br>
+                Tilton, NH 03276
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="register">
+        <div class="section-heading">
+          <img id="register" src="./images/chapters-icon.png" alt="Flat icon book chapters" height:"auto" width="40px">
+          <h2>Register for a Reading</h2>
+        </div>
+        <form action="#">
+          <div class="form-container">
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+
+            <label for="first"><b>First Name</b></label>
+            <input type="text" placeholder="Enter First Name" name="first" id="first" required>
+
+            <label for="last"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" name="last" id="last" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" id="email" required>
+            <hr>
+            <button type="submit" class="registerbtn">Register</button>
+          </div>
+        </form>
+      </section>
+    </div>
+    <footer>
+      <img class="book-icon" src="./images/book-icon.png" alt="Small book icon">
+      <p>
+        <span class="copyright">&copy;</span> Readers United Book Club &nbsp;<span class="year"></span>
+      </p>
+    </footer>
+
+    <script src="./js/index.js"></script>
+  </body>
+
+</html>

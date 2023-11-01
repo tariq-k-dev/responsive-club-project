@@ -1,0 +1,431 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  background-color: #fff;
+  font-size: 62.5%;
+}
+
+body {
+  color: rgba(44, 58, 71, 1);
+  font-family: "Literata", serif;
+  font-size: 1.6rem;
+}
+
+/* Site Links */
+.navigation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(53, 59, 72, 1);
+  height: 8rem;
+  position: fixed;
+  top: 0;
+  padding: 0.5rem 0 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-heading img {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.nav-heading h4 {
+  color: rgba(247, 241, 227, 1);
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+  height: 5rem;
+  width: 48rem;
+}
+
+@media only screen and (max-width: 480px) {
+  nav ul {
+    width: 35rem;
+  }
+}
+
+.nav-link {
+  border-bottom: 1px solid transparent;
+  color: rgba(248, 239, 186, 1);
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: rgba(247, 241, 227, 1);
+}
+
+@media only screen and (max-width: 468px) {
+  .nav-link:hover {
+    color: rgba(248, 239, 186, 1);
+  }
+}
+
+.active {
+  border-bottom: 1px solid rgba(247, 241, 227, 1);
+  color: rgba(247, 241, 227, 1);
+}
+
+.header-background {
+  background-image: url("../images/books-background-opacity-80.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  margin-top: 8rem;
+  position: relative;
+  z-index: -10;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: fixed;
+  margin-top: -3rem;
+  height: 400px;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  margin-top: 5rem;
+}
+
+header p {
+  font-size: 2rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    padding: 0 1rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    letter-spacing: normal;
+    white-space: pre;
+  }
+
+  header p {
+    font-size: 1.5rem;
+    letter-spacing: normal;
+  }
+}
+
+.color-overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 400px;
+  width: 100%;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 1);
+  height: fit-content;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.chapters,
+.schedule,
+.register {
+  background-color: #fff;
+  min-height: 40rem;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  z-index: 100;
+}
+
+@media only screen and (max-width: 768px) {
+  .chapters,
+  .schedule,
+  .register {
+    width: 100%;
+    padding: 3rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  iframe {
+    width: 340px;
+    height: auto;
+  }
+}
+
+.section-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.chapters img,
+.schedule img,
+.register img {
+  height: auto;
+  width: 4rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cards__details,
+.schedule__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  background-color: rgba(53, 59, 72, 1);
+  border: 2px solid rgba(53, 59, 72, 1);
+  border-radius: 0.4rem;
+  color: rgba(247, 241, 227, 1);
+  padding: 1rem;
+}
+
+.cards__details h3 {
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.cards__details iframe {
+  border-radius: 0.4rem;
+}
+
+#sunapee,
+#lebanon,
+#tilton {
+  width: 100%;
+}
+
+.schedule__details {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+/* Calendar */
+ul {
+  list-style: none;
+}
+
+.calendar {
+  font-family: Verdana, sans-serif;
+  height: auto;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.calendar__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  width: 100%;
+  background: #1abc9c;
+  color: #fff;
+  text-align: center;
+}
+
+.calendar__details h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.calendar__details ul {
+  margin: 0;
+  padding: 0;
+}
+
+.calendar__details ul li {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.days li .active-day {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important;
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width: 720px) {
+  .weekdays li,
+  .days li {
+    width: 13.1%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li,
+  .days li {
+    width: 12.5%;
+  }
+  .days li .active {
+    padding: 2px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li,
+  .days li {
+    width: 12.2%;
+  }
+}
+
+.time-place {
+  padding: 2rem 0;
+}
+
+.time-place h4 {
+  font-weight: 500;
+}
+
+/* Registration */
+
+.form-container {
+  width: 35rem;
+  margin: 0 auto;
+}
+/* Full-width input fields */
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(53, 59, 72, 1);
+  color: rgba(247, 241, 227, 1);
+  height: 6rem;
+  width: 100%;
+}
+
+.book-icon {
+  align-self: center;
+  display: inline-block;
+  height: 2rem;
+  width: auto;
+  margin-top: 0.4rem;
+}
+
+.copyright {
+  font-size: 2rem;
+}
